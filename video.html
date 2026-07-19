@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video</title>
+
+<style>
+body{
+    margin:0;
+    background:black;
+    color:white;
+    font-family:Arial;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    overflow:hidden;
+}
+
+#startScreen{
+    text-align:center;
+}
+
+button{
+    font-size:24px;
+    padding:20px 40px;
+    cursor:pointer;
+}
+
+video{
+    display:none;
+    width:100vw;
+    height:100vh;
+    object-fit:contain;
+    background:black;
+}
+</style>
+
+</head>
+<body>
+
+<img id="fullscreenImage" src="fsimg.jpg">
+
+<video id="video">
+    <source src="video.mp4" type="video/mp4">
+</video>
+
+<script>
+const img = document.getElementById("fullscreenImage");
+const video = document.getElementById("video");
+
+img.onclick = async () => {
+
+    img.style.display = "none";
+
+    video.style.display = "block";
+
+    await video.requestFullscreen();
+
+    video.play();
+};
+</script>
+
+</body>
+</html>
