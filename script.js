@@ -51,20 +51,27 @@ const rotateOverlay = document.getElementById("rotateOverlay");
 
 function checkOrientation() {
 
-    // Only phones/tablets
-    if (window.matchMedia("(max-width: 768px)").matches) {
+    const isTouchDevice =
+        ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
 
-        if (window.innerHeight > window.innerWidth) {
+    if (isTouchDevice) {
+
+        if (window.matchMedia("(orientation: portrait)").matches) {
             rotateOverlay.style.display = "flex";
         } else {
             rotateOverlay.style.display = "none";
         }
 
     } else {
-        // Never show on laptops/desktops
+        // Desktop/Laptop
         rotateOverlay.style.display = "none";
     }
 }
+
+checkOrientation();
+
+window.addEventListener("resize", checkOrientation);
+window.addEventListener("orientationchange", checkOrientation);
 
 checkOrientation();
 
