@@ -126,11 +126,11 @@ video{
 @media (pointer: coarse) {
 
     input{
-        transform: translateX(+120px);
+        transform: translateX(+70px);
     }
 
     button{
-        transform: translateX(+120px);
+        transform: translateX(+70px);
     }
 
 }
