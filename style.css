@@ -41,6 +41,8 @@ input{
     margin-bottom:18px;
 
     background:white;
+
+    transform: translateX(-50px)
 }
 
 button{
@@ -58,6 +60,8 @@ button{
     cursor:pointer;
 
     transition:.25s;
+
+    transform: translateX(-50px)
 }
 
 button:hover{
@@ -80,4 +84,41 @@ video{
     width:100vw;
     height:100vh;
     object-fit:contain;
+}
+#rotateMessage{
+    position:fixed;
+    inset:0;
+    background:black;
+    color:white;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    font-size:30px;
+    font-family:Arial, sans-serif;
+    z-index:9999;
+}
+#rotateOverlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:black;
+    color:white;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    z-index:99999;
+}
+
+#rotateOverlay h2{
+    margin:15px 0 5px;
+    font-size:32px;
+}
+
+#rotateOverlay p{
+    font-size:18px;
+    opacity:0.8;
 }
