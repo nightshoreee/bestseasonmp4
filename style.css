@@ -126,11 +126,11 @@ video{
 @media screen and (max-width: 768px) {
 
     input{
-        transform: translateX(80px);
+        transform: translateX(+120px);
     }
 
     button{
-        transform: translateX(80px);
+        transform: translateX(+120px);
     }
 
 }
