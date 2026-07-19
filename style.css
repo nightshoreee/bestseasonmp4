@@ -123,7 +123,7 @@ video{
     font-size:18px;
     opacity:0.8;
 }
-@media screen and (max-width: 768px) {
+@media (pointer: coarse) {
 
     input{
         transform: translateX(+120px);
