@@ -9,23 +9,6 @@
 </head>
 <body>
 
-    <div class="container">
-        <h1>Enter Password</h1>
-
-        <input
-type="password"
-id="password"
-placeholder="anniversary"
-maxlength="8">
-
-        <button onclick="checkPassword()">
-    Continue
-</button>
-
-        <p id="error"></p>
-    </div>
-
-<script src="script.js"></script>
 <div id="rotateOverlay">
     <div>
         <div style="font-size:70px;">📱</div>
@@ -33,5 +16,24 @@ maxlength="8">
         <p>Please rotate your device to landscape to continue.</p>
     </div>
 </div>
+
+<div class="container" id="mainContent">
+    <h1>Enter Password</h1>
+
+    <input
+        type="password"
+        id="password"
+        placeholder="anniversary"
+        maxlength="8">
+
+    <button onclick="checkPassword()">
+        Continue
+    </button>
+
+    <p id="error"></p>
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>

@@ -48,30 +48,26 @@ document.getElementById("password").addEventListener("keydown", function (event)
 // ------------------------------
 
 const rotateOverlay = document.getElementById("rotateOverlay");
+const mainContent = document.getElementById("mainContent");
 
 function checkOrientation() {
 
-    const isTouchDevice =
-        ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
-    if (isTouchDevice) {
-
-        if (window.matchMedia("(orientation: portrait)").matches) {
-            rotateOverlay.style.display = "flex";
-        } else {
-            rotateOverlay.style.display = "none";
-        }
-
-    } else {
-        // Desktop/Laptop
+    if (!isMobile) {
         rotateOverlay.style.display = "none";
+        mainContent.style.display = "block";
+        return;
+    }
+
+    if (window.matchMedia("(orientation: portrait)").matches) {
+        rotateOverlay.style.display = "flex";
+        mainContent.style.display = "none";
+    } else {
+        rotateOverlay.style.display = "none";
+        mainContent.style.display = "block";
     }
 }
-
-checkOrientation();
-
-window.addEventListener("resize", checkOrientation);
-window.addEventListener("orientationchange", checkOrientation);
 
 checkOrientation();
 
