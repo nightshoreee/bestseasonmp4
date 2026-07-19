@@ -42,7 +42,7 @@ input{
 
     background:white;
 
-    transform: translateX(-50px)
+    transform: translateX(-80px)
 }
 
 button{
@@ -61,7 +61,7 @@ button{
 
     transition:.25s;
 
-    transform: translateX(-50px)
+    transform: translateX(-80px)
 }
 
 button:hover{
