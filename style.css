@@ -10,7 +10,7 @@ body{
 
 .container{
     position:absolute;
-    top:50%;
+    top:48%;
     right:10%;
     transform:translateY(-50%);
     display:flex;
@@ -126,11 +126,11 @@ video{
 @media (pointer: coarse) {
 
     input{
-        transform: translateX(+0px);
+        transform: translateX(-10px);
     }
 
     button{
-        transform: translateX(+0px);
+        transform: translateX(-10px);
     }
 
 }
