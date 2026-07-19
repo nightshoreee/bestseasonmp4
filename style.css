@@ -123,3 +123,14 @@ video{
     font-size:18px;
     opacity:0.8;
 }
+@media screen and (max-width: 768px) {
+
+    input{
+        transform: translateX(80px);
+    }
+
+    button{
+        transform: translateX(80px);
+    }
+
+}
